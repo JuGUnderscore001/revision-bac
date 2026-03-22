@@ -428,58 +428,97 @@ function ModeLacunaire({ texte, onBack }) {
 }
 
 // ── MODE ORDRE ─────────────────────────────────────────────────────────────────
-function ModeOrdre({ texte, onBack }) {
+function ModeMouvement({ texte, onBack }) {
   const all = getAllProcedes(texte);
-  const [items, setItems] = useState(() => shuffle(all));
-  const [sel, setSel] = useState(null);
+  const [cards] = useState(() => shuffle(all));
+  const [idx, setIdx] = useState(0);
+  const [chosen, setChosen] = useState(null);
+  const [scores, setScores] = useState({ ok:0, ko:0 });
   const [done, setDone] = useState(false);
-  const [score, setScore] = useState(null);
 
-  function tap(i) {
-    if (done) return;
-    if (sel === null) { setSel(i); return; }
-    if (sel === i) { setSel(null); return; }
-    const n = [...items]; [n[sel], n[i]] = [n[i], n[sel]]; setItems(n); setSel(null);
-  }
-  function validate() {
-    let ok = 0; items.forEach((it, i) => { if (it === all[i]) ok++; });
-    setScore(ok); setDone(true);
-  }
-  function restart() { setItems(shuffle(all)); setSel(null); setDone(false); setScore(null); }
+  const c = cards[idx];
+  const isCorrect = chosen === c.mouvement;
 
-  if (done) return <Score correct={score} total={all.length} onBack={onBack} onRetry={restart} />;
+  function pick(num) {
+    if (chosen !== null) return;
+    setChosen(num);
+  }
+  function next() {
+    setScores(s => ({ ...s, [isCorrect?"ok":"ko"]: s[isCorrect?"ok":"ko"]+1 }));
+    if (idx + 1 >= cards.length) { setDone(true); return; }
+    setIdx(i => i+1); setChosen(null);
+  }
+  function restart() { setIdx(0); setChosen(null); setScores({ok:0,ko:0}); setDone(false); }
+
+  if (done) return <Score correct={scores.ok} total={cards.length} onBack={onBack} onRetry={restart} />;
 
   return (
-    <div style={{ padding:"16px", paddingBottom:40 }}>
-      {sel !== null && (
-        <div style={{ background:C.violetL, border:`1px solid ${C.violetB}`, borderRadius:10, padding:"10px 14px", marginBottom:12, fontSize:13, color:"#c4bbff" }}>
-          Sélectionné : <strong>{items[sel].nom}</strong> — appuie sur une autre carte pour échanger.
-        </div>
-      )}
-      <div style={{ fontSize:12, color:C.muted, marginBottom:12, lineHeight:1.5 }}>
-        Remets les {all.length} procédés dans l'ordre du texte. Appuie sur deux cartes pour les échanger.
+    <div style={{ padding:"16px" }}>
+      <div style={pbar}><div style={pfill((idx/cards.length)*100)} /></div>
+      <div style={{ fontSize:11, color:C.hint, textAlign:"right", marginBottom:14 }}>{idx+1} / {cards.length}</div>
+
+      <div style={{ ...card({ marginBottom:20, padding:"20px 18px" }) }}>
+        <div style={{ fontSize:11, letterSpacing:"0.07em", textTransform:"uppercase", color:C.hint, marginBottom:10 }}>Dans quel mouvement ?</div>
+        <div style={{ fontSize:18, fontWeight:"bold", color:C.text, marginBottom:8 }}>{c.nom}</div>
+        <div style={{ fontSize:13, fontStyle:"italic", color:C.muted, lineHeight:1.5 }}>{c.exemple}</div>
       </div>
-      {items.map((it, i) => (
-        <div key={i} onClick={() => tap(i)} style={{
-          ...card({ marginBottom:8, padding:"10px 14px", cursor:"pointer",
-            borderColor: sel===i ? C.violet : C.border,
-            background: sel===i ? C.violetL : C.surface,
-            transition:"all 0.15s",
-          })
-        }}>
-          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center" }}>
-            <div>
-              <div style={badge(it.couleur, it.couleurL+"44")}>M{it.mouvement} · {it.lignes}</div>
-              <div style={{ fontSize:13, fontWeight:"bold", color:C.text }}>{it.nom}</div>
+
+      <div style={{ display:"flex", flexDirection:"column", gap:10, marginBottom:16 }}>
+        {texte.mouvements.map(m => {
+          const isPicked = chosen === m.num;
+          const isRight = chosen !== null && m.num === c.mouvement;
+          const isWrong = isPicked && !isRight;
+          return (
+            <div key={m.num} onClick={() => pick(m.num)} style={{
+              ...card({
+                cursor: chosen ? "default" : "pointer",
+                padding:"12px 16px",
+                borderColor: isRight ? C.teal : isWrong ? C.red : isPicked ? C.violet : C.border,
+                background: isRight ? C.tealL : isWrong ? C.redL : isPicked ? C.violetL : C.surface,
+                transition:"all 0.2s",
+              })
+            }}>
+              <div style={{ display:"flex", alignItems:"center", gap:10 }}>
+                <div style={{
+                  width:22, height:22, borderRadius:"50%", flexShrink:0,
+                  background: isRight ? C.teal : isWrong ? C.red : m.couleur,
+                  display:"flex", alignItems:"center", justifyContent:"center",
+                  fontSize:11, fontWeight:"bold", color:"white",
+                }}>{m.num}</div>
+                <div style={{ flex:1 }}>
+                  <div style={{ fontSize:12, fontWeight:"bold", color:C.text }}>{m.titre}</div>
+                  <div style={{ fontSize:11, color:C.hint, marginTop:2 }}>{m.lignes}</div>
+                </div>
+                {isRight && <div style={{ fontSize:18, color:C.teal }}>✓</div>}
+                {isWrong && <div style={{ fontSize:18, color:C.red }}>✗</div>}
+              </div>
             </div>
-            {sel===i && <div style={{ fontSize:18 }}>⇅</div>}
+          );
+        })}
+      </div>
+
+      {chosen !== null && (
+        <>
+          <div style={{
+            background: isCorrect ? C.tealL : C.redL,
+            border: `1px solid ${isCorrect ? C.tealB : C.redB}`,
+            borderRadius:10, padding:"10px 14px", marginBottom:12,
+            fontSize:13, color: isCorrect ? "#064E3B" : "#7B1A1A", lineHeight:1.5,
+          }}>
+            {isCorrect
+              ? `Correct ! Ce procédé appartient bien au mouvement ${c.mouvement} : "${texte.mouvements.find(m=>m.num===c.mouvement)?.titre}".`
+              : `Pas tout à fait. Ce procédé appartient au mouvement ${c.mouvement} : "${texte.mouvements.find(m=>m.num===c.mouvement)?.titre}".`
+            }
           </div>
-        </div>
-      ))}
-      <button style={btn(C.violetL, C.violetB)} onClick={validate}>Valider mon ordre</button>
+          <button style={btn(C.violetL, C.violetB)} onClick={next}>
+            {idx + 1 >= cards.length ? "Voir mon score" : "Procédé suivant →"}
+          </button>
+        </>
+      )}
     </div>
   );
 }
+
 
 // ── MODE EXAMINATEUR ───────────────────────────────────────────────────────────
 const EXAM_Q = [
@@ -548,7 +587,7 @@ function ModeExaminateur({ texte, onBack }) {
 const MODES = [
   { id:"flashcards",   icon:"🃏", name:"Flashcards",      desc:"Procédé → exemple → effet" },
   { id:"lacunaire",    icon:"✏️", name:"Lacunaire",       desc:"Complète les cases vides" },
-  { id:"ordre",        icon:"🔀", name:"Ordre du texte",  desc:"Remets les procédés dans l'ordre" },
+  { id:"mouvement",    icon:"🗂️", name:"Quel mouvement ?", desc:"Classe le procédé dans le bon mouvement" },
   { id:"examinateur",  icon:"👩‍🏫", name:"Examinateur",    desc:"Questions type oral du bac" },
 ];
 
@@ -684,7 +723,7 @@ export default function App() {
       {/* ── MODES ── */}
       {screen === "mode" && texte && mode === "flashcards"  && <ModeFlashcards  texte={texte} onBack={() => { setScreen("texte-menu"); setMode(null); }} />}
       {screen === "mode" && texte && mode === "lacunaire"   && <ModeLacunaire   texte={texte} onBack={() => { setScreen("texte-menu"); setMode(null); }} />}
-      {screen === "mode" && texte && mode === "ordre"       && <ModeOrdre       texte={texte} onBack={() => { setScreen("texte-menu"); setMode(null); }} />}
+      {screen === "mode" && texte && mode === "mouvement"   && <ModeMouvement   texte={texte} onBack={() => { setScreen("texte-menu"); setMode(null); }} />}
       {screen === "mode" && texte && mode === "examinateur" && <ModeExaminateur texte={texte} onBack={() => { setScreen("texte-menu"); setMode(null); }} />}
 
     </div>
