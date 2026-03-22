@@ -143,7 +143,15 @@ const TEXTES = [
       "Le bonheur s'exprime en 3 registres : errance/liberté, désir charnel, transfiguration symboliste.",
       "Ouvertures : influence V. Hugo (métaphore) et Baudelaire (symbolisme). Comparer avec d'autres poèmes du parcours Émancipations créatrices.",
     ],
-  }
+  },
+  { id:3,  numero:"n°2",  titre:"On ne badine pas avec l'amour",  auteur:"Musset, 1834",       acte:"Acte II, scène 5",   oi:"On ne badine pas avec l'amour, Musset, 1834", parcours:"Les jeux du cœur et de la parole",   enConstruction:true, mouvements:[{num:1,titre:"",lignes:"",couleur:"#6B5CE7",couleurL:"#EAE8FD",resume:"",procedes:[]}] },
+  { id:4,  numero:"n°3",  titre:"On ne badine pas avec l'amour",  auteur:"Musset, 1834",       acte:"Acte III, scène 3",  oi:"On ne badine pas avec l'amour, Musset, 1834", parcours:"Les jeux du cœur et de la parole",   enConstruction:true, mouvements:[{num:1,titre:"",lignes:"",couleur:"#6B5CE7",couleurL:"#EAE8FD",resume:"",procedes:[]}] },
+  { id:5,  numero:"n°4",  titre:"On ne badine pas avec l'amour",  auteur:"Musset, 1834",       acte:"Acte III, scène 8",  oi:"On ne badine pas avec l'amour, Musset, 1834", parcours:"Les jeux du cœur et de la parole",   enConstruction:true, mouvements:[{num:1,titre:"",lignes:"",couleur:"#6B5CE7",couleurL:"#EAE8FD",resume:"",procedes:[]}] },
+  { id:6,  numero:"n°5",  titre:"Réponse à un acte d'accusation", auteur:"V. Hugo, 1834",      acte:"Poème",              oi:"Cahiers de Douai, Rimbaud, 1870",              parcours:"Émancipations créatrices",           enConstruction:true, mouvements:[{num:1,titre:"",lignes:"",couleur:"#0D9E75",couleurL:"#DCF5EC",resume:"",procedes:[]}] },
+  { id:7,  numero:"n°7",  titre:"Vénus Anadyomène",               auteur:"Rimbaud, 1870",      acte:"Sonnet",             oi:"Cahiers de Douai, Rimbaud, 1870",              parcours:"Émancipations créatrices",           enConstruction:true, mouvements:[{num:1,titre:"",lignes:"",couleur:"#0D9E75",couleurL:"#DCF5EC",resume:"",procedes:[]}] },
+  { id:8,  numero:"n°8",  titre:"Le Mal",                         auteur:"Rimbaud, 1870",      acte:"Sonnet",             oi:"Cahiers de Douai, Rimbaud, 1870",              parcours:"Émancipations créatrices",           enConstruction:true, mouvements:[{num:1,titre:"",lignes:"",couleur:"#0D9E75",couleurL:"#DCF5EC",resume:"",procedes:[]}] },
+  { id:9,  numero:"n°9",  titre:"Manon Lescaut — La rencontre",   auteur:"L'Abbé Prévost, 1753", acte:"Roman, p.35-37",  oi:"Manon Lescaut, L'Abbé Prévost, 1753",         parcours:"Personnages en marge et plaisirs du romanesque", enConstruction:true, mouvements:[{num:1,titre:"",lignes:"",couleur:"#C0392B",couleurL:"#FDECEA",resume:"",procedes:[]}] },
+  { id:10, numero:"n°10", titre:"Manon Lescaut — La tromperie",   auteur:"L'Abbé Prévost, 1753", acte:"Roman, p.118-119", oi:"Manon Lescaut, L'Abbé Prévost, 1753",         parcours:"Personnages en marge et plaisirs du romanesque", enConstruction:true, mouvements:[{num:1,titre:"",lignes:"",couleur:"#C0392B",couleurL:"#FDECEA",resume:"",procedes:[]}] },
 ];
 
 // ── UTILS ─────────────────────────────────────────────────────────────────────
@@ -206,6 +214,104 @@ function Score({ correct, total, onBack, onRetry }) {
   );
 }
 
+// ── ILLUSTRATIONS SVG ─────────────────────────────────────────────────────────
+const ILLUSTRATIONS = {
+  1: (
+    <svg width="100%" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" style={{borderRadius:10, display:"block"}}>
+      <rect width="320" height="160" fill="#1a1035"/>
+      <path d="M0 0 Q20 40 10 80 Q5 120 15 160 L0 160Z" fill="#4a1535"/>
+      <path d="M0 0 Q30 30 20 70 Q15 110 25 155 L0 160Z" fill="#6B1F45"/>
+      <path d="M320 0 Q300 40 310 80 Q315 120 305 160 L320 160Z" fill="#4a1535"/>
+      <path d="M320 0 Q290 30 300 70 Q305 110 295 155 L320 160Z" fill="#6B1F45"/>
+      <rect x="0" y="130" width="320" height="30" fill="#2a1a0a"/>
+      <rect x="0" y="128" width="320" height="3" fill="#3d2510"/>
+      <rect x="50" y="30" width="8" height="100" fill="#2a2060" rx="2"/>
+      <rect x="262" y="30" width="8" height="100" fill="#2a2060" rx="2"/>
+      <rect x="44" y="26" width="20" height="6" fill="#3a3080" rx="1"/>
+      <rect x="256" y="26" width="20" height="6" fill="#3a3080" rx="1"/>
+      <line x1="160" y1="0" x2="160" y2="25" stroke="#FCD34D" strokeWidth="1.5"/>
+      <ellipse cx="160" cy="27" rx="22" ry="5" fill="none" stroke="#FCD34D" strokeWidth="1"/>
+      <rect x="141" y="22" width="3" height="8" fill="#FFF8DC" rx="1"/>
+      <rect x="153" y="20" width="3" height="8" fill="#FFF8DC" rx="1"/>
+      <rect x="165" y="20" width="3" height="8" fill="#FFF8DC" rx="1"/>
+      <rect x="177" y="22" width="3" height="8" fill="#FFF8DC" rx="1"/>
+      <ellipse cx="142" cy="21" rx="2" ry="3" fill="#FFA500" opacity="0.9"/>
+      <ellipse cx="154" cy="19" rx="2" ry="3" fill="#FFA500" opacity="0.9"/>
+      <ellipse cx="166" cy="19" rx="2" ry="3" fill="#FFA500" opacity="0.9"/>
+      <ellipse cx="178" cy="21" rx="2" ry="3" fill="#FFA500" opacity="0.9"/>
+      <ellipse cx="160" cy="80" rx="80" ry="55" fill="#FCD34D" opacity="0.06"/>
+      <ellipse cx="105" cy="120" rx="18" ry="12" fill="#8B4513"/>
+      <path d="M93 120 Q88 100 90 85 Q92 75 105 73 Q118 75 120 85 Q122 100 117 120Z" fill="#A0522D"/>
+      <circle cx="105" cy="70" r="9" fill="#D4A574"/>
+      <path d="M97 64 Q105 58 113 64" fill="#4a2505" stroke="#4a2505" strokeWidth="2"/>
+      <line x1="117" y1="88" x2="138" y2="95" stroke="#D4A574" strokeWidth="4" strokeLinecap="round"/>
+      <ellipse cx="215" cy="120" rx="18" ry="12" fill="#556B2F"/>
+      <path d="M203 120 Q198 100 200 85 Q202 75 215 73 Q228 75 230 85 Q232 100 227 120Z" fill="#6B8E23"/>
+      <circle cx="215" cy="70" r="9" fill="#D4A574"/>
+      <path d="M207 64 Q215 58 223 64" fill="#2d1503" stroke="#2d1503" strokeWidth="2"/>
+      <line x1="203" y1="88" x2="182" y2="95" stroke="#D4A574" strokeWidth="4" strokeLinecap="round"/>
+      <path d="M148 130 Q155 100 160 75 Q165 100 172 130Z" fill="#1a1a5c"/>
+      <path d="M142 130 Q150 105 160 90 Q148 115 148 130Z" fill="#2a2a8c"/>
+      <rect x="153" y="90" width="14" height="35" fill="#2a2a7c" rx="2"/>
+      <circle cx="160" cy="83" r="10" fill="#C4956A"/>
+      <path d="M150 78 Q160 70 170 78 L168 76 Q160 65 152 76Z" fill="#1a1a3c"/>
+      <path d="M170 76 Q178 68 183 55 Q177 65 172 74Z" fill="#C41E3A" stroke="#C41E3A" strokeWidth="0.5"/>
+      <path d="M155 92 Q160 88 165 92" fill="white" opacity="0.8"/>
+      <ellipse cx="72" cy="124" rx="10" ry="8" fill="#654321"/>
+      <path d="M63 124 Q61 112 63 104 Q65 98 72 97 Q79 98 81 104 Q83 112 81 124Z" fill="#8B6347"/>
+      <circle cx="72" cy="94" r="7" fill="#C4956A"/>
+      <line x1="79" y1="106" x2="84" y2="112" stroke="#C4956A" strokeWidth="3" strokeLinecap="round"/>
+    </svg>
+  ),
+  2: (
+    <svg width="100%" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" style={{borderRadius:10, display:"block"}}>
+      <rect width="320" height="160" fill="#0d1117"/>
+      <circle cx="30" cy="15" r="1" fill="white" opacity="0.8"/>
+      <circle cx="55" cy="8" r="1.2" fill="white" opacity="0.9"/>
+      <circle cx="80" cy="20" r="0.8" fill="white" opacity="0.7"/>
+      <circle cx="110" cy="10" r="1" fill="white"/>
+      <circle cx="140" cy="18" r="0.8" fill="white" opacity="0.8"/>
+      <circle cx="200" cy="8" r="1.1" fill="white" opacity="0.9"/>
+      <circle cx="240" cy="15" r="0.9" fill="white" opacity="0.7"/>
+      <circle cx="270" cy="6" r="1" fill="white"/>
+      <circle cx="300" cy="20" r="0.8" fill="white" opacity="0.8"/>
+      <circle cx="280" cy="25" r="16" fill="#FEF3C7" opacity="0.9"/>
+      <circle cx="287" cy="20" r="13" fill="#0d1117"/>
+      <path d="M0 100 Q60 70 120 85 Q180 100 240 75 Q280 60 320 80 L320 160 L0 160Z" fill="#1a2a0a"/>
+      <rect x="80" y="55" width="160" height="90" fill="#2d1f0a" rx="2"/>
+      <path d="M70 58 L160 25 L250 58Z" fill="#1a0f05"/>
+      <rect x="190" y="20" width="14" height="30" fill="#241508" rx="1"/>
+      <path d="M197 20 Q193 12 197 5 Q201 -2 197 -8" fill="none" stroke="rgba(150,150,150,0.4)" strokeWidth="3" strokeLinecap="round"/>
+      <rect x="118" y="45" width="84" height="22" fill="#0d3d0d" rx="3" stroke="#1a6b1a" strokeWidth="1"/>
+      <rect x="155" y="43" width="2" height="4" fill="#3d2810"/>
+      <rect x="95" y="75" width="30" height="35" fill="#FFA500" opacity="0.85" rx="1"/>
+      <line x1="110" y1="75" x2="110" y2="110" stroke="#2d1f0a" strokeWidth="1.5"/>
+      <line x1="95" y1="92" x2="125" y2="92" stroke="#2d1f0a" strokeWidth="1.5"/>
+      <path d="M95 110 Q95 130 75 145 Q115 135 125 110Z" fill="#FFA500" opacity="0.12"/>
+      <rect x="195" y="75" width="30" height="35" fill="#FFA500" opacity="0.7" rx="1"/>
+      <line x1="210" y1="75" x2="210" y2="110" stroke="#2d1f0a" strokeWidth="1.5"/>
+      <line x1="195" y1="92" x2="225" y2="92" stroke="#2d1f0a" strokeWidth="1.5"/>
+      <rect x="148" y="100" width="24" height="45" fill="#1a0d03" rx="1"/>
+      <circle cx="168" cy="123" r="2" fill="#8B6914"/>
+      <path d="M100 160 Q130 145 160 142 Q190 145 220 160Z" fill="#2a1f0a"/>
+      <path d="M0 160 Q50 148 100 155 Q130 145 160 142 Q190 145 220 160 Q260 150 320 160Z" fill="#1a150a"/>
+      <line x1="58" y1="148" x2="53" y2="160" stroke="#1a1a2e" strokeWidth="3" strokeLinecap="round"/>
+      <line x1="58" y1="148" x2="63" y2="155" stroke="#1a1a2e" strokeWidth="3" strokeLinecap="round"/>
+      <rect x="53" y="130" width="10" height="20" fill="#1a1a2e" rx="2"/>
+      <circle cx="58" cy="126" r="6" fill="#1a1a2e"/>
+      <line x1="63" y1="135" x2="72" y2="142" stroke="#1a1a2e" strokeWidth="2.5" strokeLinecap="round"/>
+      <circle cx="73" cy="143" r="4" fill="#2a1505"/>
+      <ellipse cx="52" cy="161" rx="5" ry="2" fill="#2a1505"/>
+      <ellipse cx="63" cy="157" rx="5" ry="2" fill="#2a1505"/>
+      <line x1="270" y1="160" x2="270" y2="85" stroke="#2a1505" strokeWidth="4" strokeLinecap="round"/>
+      <path d="M250 85 Q270 60 290 85 Q275 70 270 85 Q265 70 250 85Z" fill="#3d2005" opacity="0.8"/>
+      <ellipse cx="240" cy="110" rx="4" ry="3" fill="#8B4513" opacity="0.7" transform="rotate(-30 240 110)"/>
+      <ellipse cx="250" cy="100" rx="3" ry="2" fill="#A0522D" opacity="0.8" transform="rotate(20 250 100)"/>
+      <ellipse cx="295" cy="105" rx="4" ry="2" fill="#CD853F" opacity="0.7" transform="rotate(-15 295 105)"/>
+    </svg>
+  ),
+};
+
 // ── FICHE TEXTE ───────────────────────────────────────────────────────────────
 function FicheTexte({ texte, onBack }) {
   const [section, setSection] = useState("contexte");
@@ -241,6 +347,12 @@ function FicheTexte({ texte, onBack }) {
         {/* ── CONTEXTE ── */}
         {section === "contexte" && (
           <div>
+            {/* Illustration */}
+            {ILLUSTRATIONS[texte.id] && (
+              <div style={{ marginBottom:14, borderRadius:10, overflow:"hidden", opacity:0.92 }}>
+                {ILLUSTRATIONS[texte.id]}
+              </div>
+            )}
             {/* Header info card */}
             <div style={{ ...card(), borderLeft:`3px solid ${C.violet}`, borderRadius:"0 12px 12px 0", marginBottom:16 }}>
               <div style={{ fontSize:11, color:C.hint, marginBottom:2, textTransform:"uppercase", letterSpacing:"0.06em" }}>Œuvre intégrale</div>
@@ -853,29 +965,58 @@ export default function App() {
 
           <div style={{ padding:"0 18px 40px" }}>
             <div style={{ ...sectionLabel, marginBottom:12 }}>Choisis un texte</div>
-            {TEXTES.map((t, i) => (
-              <div key={t.id} onClick={() => goTexteMenu(i)} style={{
-                ...card({ cursor:"pointer", marginBottom:10 }),
-                borderLeft:`3px solid ${t.mouvements[0].couleur}`,
-                borderRadius:"0 12px 12px 0",
-              }}>
-                <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
-                  <div>
-                    <div style={{ fontSize:15, fontStyle:"italic", color:C.text, marginBottom:2 }}>{t.numero} — {t.titre}</div>
-                    <div style={{ fontSize:12, color:C.muted }}>{t.auteur} · {t.acte}</div>
-                    <div style={{ fontSize:11, color:C.hint, marginTop:4 }}>
-                      {t.mouvements.reduce((acc,m) => acc+m.procedes.length, 0)} procédés · {t.mouvements.length} mouvements
-                    </div>
+            {/* Group by parcours */}
+            {[
+              { label:"Les jeux du cœur et de la parole",                ids:[1,3,4,5] },
+              { label:"Émancipations créatrices",                         ids:[2,6,7,8] },
+              { label:"Personnages en marge et plaisirs du romanesque",   ids:[9,10] },
+            ].map(group => {
+              const groupTextes = TEXTES.filter(t => group.ids.includes(t.id));
+              if (!groupTextes.length) return null;
+              return (
+                <div key={group.label} style={{ marginBottom:20 }}>
+                  <div style={{ fontSize:10, letterSpacing:"0.07em", textTransform:"uppercase", color:C.hint, marginBottom:8, paddingBottom:6, borderBottom:`0.5px solid ${C.border}` }}>
+                    {group.label}
                   </div>
-                  <div style={{ fontSize:20, color:C.hint }}>›</div>
+                  {groupTextes.map((t, i) => {
+                    const isReady = !t.enConstruction;
+                    return (
+                      <div key={t.id}
+                        onClick={() => isReady && goTexteMenu(TEXTES.indexOf(t))}
+                        style={{
+                          ...card({ marginBottom:8,
+                            cursor: isReady ? "pointer" : "default",
+                            opacity: isReady ? 1 : 0.5,
+                            borderLeft:`3px solid ${t.mouvements[0].couleur}`,
+                            borderRadius:"0 12px 12px 0",
+                          })
+                        }}
+                      >
+                        <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+                          <div style={{ flex:1 }}>
+                            <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:2 }}>
+                              <div style={{ fontSize:15, fontStyle:"italic", color: isReady ? C.text : C.muted }}>{t.numero} — {t.titre}</div>
+                              {t.enConstruction && (
+                                <span style={{ fontSize:9, fontWeight:"bold", letterSpacing:"0.06em", textTransform:"uppercase", padding:"2px 7px", borderRadius:20, background:"rgba(217,119,6,0.15)", color:"#D97706", border:"1px solid rgba(217,119,6,0.3)" }}>
+                                  En construction
+                                </span>
+                              )}
+                            </div>
+                            <div style={{ fontSize:12, color:C.hint }}>{t.auteur} · {t.acte}</div>
+                            {isReady && (
+                              <div style={{ fontSize:11, color:C.hint, marginTop:3 }}>
+                                {t.mouvements.reduce((acc,m) => acc+m.procedes.length, 0)} procédés · {t.mouvements.length} mouvements
+                              </div>
+                            )}
+                          </div>
+                          {isReady && <div style={{ fontSize:18, color:C.hint, marginLeft:8 }}>›</div>}
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
-              </div>
-            ))}
-            {Array.from({length: 10 - TEXTES.length}).map((_, i) => (
-              <div key={i} style={{ ...card({ marginBottom:8, opacity:0.35 }) }}>
-                <div style={{ fontSize:13, color:C.hint, fontStyle:"italic" }}>Texte n°{TEXTES.length+i+1} — à venir</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       )}
