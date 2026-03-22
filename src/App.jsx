@@ -72,6 +72,77 @@ const TEXTES = [
       "Intention de Molière : rend DJ admirable par ses qualités d'orateur, de séducteur et de manipulateur — pour le public.",
       "Ouverture : la suite (DJ châtié par Dieu, envoyé en enfer) · comparer avec Perdican (On ne badine pas avec l'amour).",
     ],
+  },
+  {
+    id: 2,
+    numero: "n°6",
+    titre: "Au Cabaret-Vert",
+    auteur: "Rimbaud, 1870",
+    acte: "Sonnet · Octobre 1870",
+    oi: "Cahiers de Douai, Rimbaud, 1870",
+    parcours: "Émancipations créatrices",
+    mouvement_litteraire: "Entre Romantisme (influence V. Hugo — vocabulaire familier, métaphore) et Symbolisme naissant (influence Baudelaire — conception symbolique du poème, transfiguration du réel).",
+    genre: "Sonnet (2 quatrains + 2 tercets) · Alexandrins · Rimes croisées ABAB/ABAB/CCD/EED. Forme libre issue du 16e s. (Pétrarque). Rythme volontairement déséquilibré : coupes pas au même endroit → émancipation poétique.",
+    situation: "1870 : Rimbaud a 16 ans, écrit 22 poèmes lors de ses fugues → envoie à Paul Demeny. Poème daté (Octobre 1870) comme un journal intime/de bord. Rimbaud à Charleroi (Belgique), fugue. Pronom « je » → R se met en scène.",
+    personnages: "Le poète-narrateur (Rimbaud) · La serveuse du cabaret",
+    libertinage: "",
+    problematique: "Comment, à travers ce récit d'une fugue, Rimbaud exprime-t-il son bonheur ?",
+    mouvements: [
+      {
+        num: 1,
+        titre: "L'arrivée au Cabaret — poème autobiographique",
+        lignes: "v. 1–4",
+        couleur: "#6B5CE7",
+        couleurL: "#EAE8FD",
+        resume: "Poème à caractère autobiographique : poème daté, pronom « je », lexique du vagabondage (errance), « Charleroi » (fugue en Belgique). Liberté renforcée par 2 enjambements. Mise en valeur du Cabaret par antéposition → cocon, havre de paix. Émancipation à la fois familiale et poétique : vocabulaire familier rappelle V. Hugo, rythme volontairement déséquilibré.",
+        procedes: [
+          { lignes:"v. 1–2", nom:"Lexique du vagabondage", exemple:"« bottines », « cailloux des chemins », « Charleroi »", effet:"Errance, fugue en Belgique. Poème daté = journal de bord. R se met en scène." },
+          { lignes:"v. 1–2", nom:"Enjambements (×2)", exemple:"Rejets du v.1 au v.2 et v.3 au v.4", effet:"Liberté renforcée → émancipation poétique, liberté de casser le rythme et de déborder." },
+          { lignes:"v. 3",   nom:"Antéposition", exemple:"« Au Cabaret-Vert » en tête de vers et de phrase", effet:"Mise en valeur du Cabaret = lieu central. Auberge = cocon, havre de paix." },
+          { lignes:"v. 3–4", nom:"Imparfait du subj.", exemple:"« qui fût à moitié froid »", effet:"R prend confiance, s'émancipe de l'enfance → entrée dans l'âge adulte." },
+          { lignes:"v. 3–4", nom:"Vocabulaire familier", exemple:"« tartines », « beurre », « jambon »", effet:"Rappelle V. Hugo — R encore sous son influence. Récit d'émancipation familiale ET poétique." },
+          { lignes:"v. 5",   nom:"Rejet + antéposition", exemple:"« Bienheureux, j'allongeai les jambes… »", effet:"« Bienheureux » antéposé, liberté matérialisée par le rejet → liberté de casser le rythme et de déborder." },
+        ]
+      },
+      {
+        num: 2,
+        titre: "Intervention de la serveuse — désir fantasmé",
+        lignes: "v. 5–11",
+        couleur: "#0D9E75",
+        couleurL: "#DCF5EC",
+        resume: "Désir fantasmé : hyperbole « adorable » (terme religieux et excessif) → naissance du désir. Périphrase → désir charnel et provocateur. Pronom démonstratif → très péjoratif. Adjectif « niaise » confirme. Audace poétique : non-respect de la Volta, tirets au v.9 rompent la fluidité → impression de conversation orale. R s'émancipe d'une tutelle morale, brave les règles du sonnet.",
+        procedes: [
+          { lignes:"v. 7",    nom:"Hyperbole", exemple:"« adorable » — terme religieux et excessif", effet:"Naissance du désir. Terme à valeur divine détourné → désir charnel et provocation." },
+          { lignes:"v. 7–8",  nom:"Périphrase", exemple:"« la fille aux tétons énormes, aux yeux vifs »", effet:"Désir charnel et provocateur : évoque en 1 la poitrine, en 2 les yeux → intensité du désir." },
+          { lignes:"v. 9",    nom:"Pronom démonstratif", exemple:"« Celle-là » — très péjoratif", effet:"Désir présenté comme réalisable. R rend le lecteur complice de sa séduction." },
+          { lignes:"v. 9",    nom:"Adjectif péjoratif", exemple:"« niaise »", effet:"Confirme la posture de séducteur — serveuse = fille facile laissée entendre au lecteur." },
+          { lignes:"v. 9",    nom:"Non-respect de la Volta", exemple:"Changement de sujet sans marquage", effet:"Audace poétique — R s'émancipe d'une tutelle morale, brave les règles du sonnet." },
+          { lignes:"v. 9",    nom:"Tirets (×2)", exemple:"« – Celle-là, ce n'est pas… ! – »", effet:"Rompent la fluidité → déconstruire la phrase → impression de conversation orale spontanée." },
+        ]
+      },
+      {
+        num: 3,
+        titre: "Accès au bonheur — transfiguration par les synesthésies",
+        lignes: "v. 12–14",
+        couleur: "#C0392B",
+        couleurL: "#FDECEA",
+        resume: "Le plaisir repose avant tout sur la nourriture. R transmet le plaisir avec 4 sens mêlés : Goût / Toucher / Vue / Odorat → le plat devient tableau (synesthésies). Les synesthésies permettent d'accéder à un monde supérieur : passage d'une réalité matérielle/terrestre à un monde idéal et céleste. R crée une illumination qui transfigure le réel → conception symboliste du poème (Baudelaire).",
+        procedes: [
+          { lignes:"v. 12–14", nom:"Synesthésies (4 sens)", exemple:"Goût / Toucher / Vue / Odorat — « jambon rose et blanc parfumé »", effet:"R transmet le plaisir par 4 sens mêlés. Le plat → tableau. Mélange des sens = synesthésie." },
+          { lignes:"v. 12–13", nom:"Synesthésie 1", exemple:"Jambon : vue + odorat + goût", effet:"Passage d'une réalité matérielle et terrestre vers un monde idéal et céleste." },
+          { lignes:"v. 13–14", nom:"Synesthésie 2", exemple:"Bière : toucher + vue (« mousse », « dorait »)", effet:"R crée une illumination qui transfigure le réel — conception symboliste du poème." },
+          { lignes:"v. 14",    nom:"Métaphore symboliste", exemple:"« Que dorait un rayon de soleil arriéré »", effet:"Symbolisme (Baudelaire) : le poète déchiffre les symboles cachés. Transfiguration du réel." },
+        ]
+      }
+    ],
+    notions: ["Sonnet","Enjambement","Antéposition","Rejet","Synesthésie","Symbolisme","Hyperbole","Périphrase","Pronom démonstratif","Volta","Autobiographique","Vagabondage","Émancipation","Auto-dérision"],
+    synthese: "À travers le récit de sa fugue, Rimbaud s'émancipe sur le plan familial (du père et de l'enjambement) et poétique (de V. Hugo par la métaphore, de Baudelaire par la conception symbolique). Le Cabaret-Vert, havre de paix, devient le lieu d'une triple émancipation : corporelle (plaisir des sens), amoureuse (désir fantasmé) et poétique (transfiguration du réel par les synesthésies).",
+    conseil: "Bien distinguer les 3 types de bonheur (errance/liberté, désir, transfiguration). Insister sur la forme : sonnet à forme libre = déjà une émancipation poétique en soi. Sur les synesthésies : montrer le passage du matériel au céleste. Lien parcours : émancipations créatrices = R s'émancipe à la fois comme homme et comme poète.",
+    conclusion: [
+      "R s'émancipe sur le plan familial (du père, de l'enjambement) et poétique (V. Hugo, Baudelaire).",
+      "Le bonheur s'exprime en 3 registres : errance/liberté, désir charnel, transfiguration symboliste.",
+      "Ouvertures : influence V. Hugo (métaphore) et Baudelaire (symbolisme). Comparer avec d'autres poèmes du parcours Émancipations créatrices.",
+    ],
   }
 ];
 
@@ -370,64 +441,203 @@ function ModeFlashcards({ texte, onBack }) {
   );
 }
 
-// ── MODE LACUNAIRE ─────────────────────────────────────────────────────────────
-function ModeLacunaire({ texte, onBack }) {
+// ── MODE ORDRE ─────────────────────────────────────────────────────────────────
+// ── GÉNÉRATEUR QCM ────────────────────────────────────────────────────────────
+function generateQCM(texte) {
+  const questions = [];
   const all = getAllProcedes(texte);
-  const [questions] = useState(() => shuffle(all).map((p, i) => ({ ...p, hideNom: i % 2 === 0 })));
-  const [answers, setAnswers] = useState({});
-  const [revealed, setRevealed] = useState({});
+
+  questions.push({
+    question: "Quelle est la problématique de ce texte ?",
+    correct: texte.problematique,
+    choices: shuffle([texte.problematique,
+      "Comment Molière dénonce-t-il les abus de la noblesse à travers Dom Juan ?",
+      "En quoi Dom Juan est-il une figure tragique condamnée par la société ?",
+      "Comment le comique de situation permet-il de critiquer le mariage au 17e s. ?"]),
+    explication: "La problématique cible l'enjeu précis du texte : la double manipulation et le pouvoir de la parole.",
+  });
+
+  questions.push({
+    question: "À quel mouvement littéraire appartient Molière ?",
+    correct: "Le Classicisme",
+    choices: shuffle(["Le Classicisme", "Le Romantisme", "Le Réalisme", "Les Lumières"]),
+    explication: "Molière (1622-1673) est un auteur classique : ses oeuvres reposent sur l'Ordre, la Sobriété et la Mesure.",
+  });
+
+  questions.push({
+    question: "Quel est le registre principal de cette scène ?",
+    correct: "Comique et satirique",
+    choices: shuffle(["Comique et satirique", "Tragique et pathétique", "Lyrique et élégiaque", "Épique et héroïque"]),
+    explication: texte.genre,
+  });
+
+  questions.push({
+    question: "Quel est le titre du mouvement 1 (" + texte.mouvements[0].lignes + ") ?",
+    correct: texte.mouvements[0].titre,
+    choices: shuffle([
+      texte.mouvements[0].titre,
+      texte.mouvements[1].titre,
+      texte.mouvements.length > 2 ? texte.mouvements[2].titre : "La réconciliation des deux femmes",
+      "La fuite de Dom Juan face aux accusations",
+    ]),
+    explication: texte.mouvements[0].resume.slice(0, 120) + "...",
+  });
+
+  questions.push({
+    question: "Quel est le titre du mouvement 2 (" + texte.mouvements[1].lignes + ") ?",
+    correct: texte.mouvements[1].titre,
+    choices: shuffle([
+      texte.mouvements[1].titre,
+      texte.mouvements[0].titre,
+      "Le silence de Sganarelle face à la manipulation",
+      "La révélation de la vérité par les paysannes",
+    ]),
+    explication: texte.mouvements[1].resume.slice(0, 120) + "...",
+  });
+
+  const p1 = all[0];
+  const distracteurs1 = all.filter(p => p.nom !== p1.nom);
+  questions.push({
+    question: "Quel est l'effet de la " + p1.nom + " (" + p1.lignes + ") ?",
+    correct: p1.effet,
+    choices: shuffle([p1.effet, distracteurs1[1].effet, distracteurs1[3].effet, distracteurs1[5] ? distracteurs1[5].effet : distracteurs1[0].effet]),
+    explication: "Exemple : " + p1.exemple,
+  });
+
+  const p2 = all[Math.floor(all.length / 2)];
+  const autresNoms = [...new Set(all.filter(p => p.nom !== p2.nom).map(p => p.nom))];
+  questions.push({
+    question: "Comment s'appelle ce procédé : " + p2.exemple.slice(0, 60) + "... (" + p2.lignes + ") ?",
+    correct: p2.nom,
+    choices: shuffle([p2.nom, autresNoms[0], autresNoms[2] || "Métaphore filée", autresNoms[4] || "Euphémisme"]),
+    explication: p2.effet,
+  });
+
+  questions.push({
+    question: "Que signifie 'libertin' au 17e siècle ?",
+    correct: "Quelqu'un qui s'adonne aux plaisirs sans se soucier des règles sociales et religieuses",
+    choices: shuffle([
+      "Quelqu'un qui s'adonne aux plaisirs sans se soucier des règles sociales et religieuses",
+      "Un noble qui refuse de se marier par conviction philosophique",
+      "Un personnage de comédie jouant le rôle du valet rusé",
+      "Un auteur écrivant sans respecter les règles de la bienséance",
+    ]),
+    explication: "Du latin libertinus (affranchi). Au 17e s., le libertin transgresse les normes morales, sociales et religieuses.",
+  });
+
+  questions.push({
+    question: "Qu'est-ce que la double énonciation ?",
+    correct: "Les personnages se parlent entre eux ET simultanément au public",
+    choices: shuffle([
+      "Les personnages se parlent entre eux ET simultanément au public",
+      "Deux personnages prononcent la même réplique en même temps",
+      "Un personnage parle à voix haute et à voix basse dans la même scène",
+      "Le narrateur intervient pour commenter les actions des personnages",
+    ]),
+    explication: "Ici, les apartés de DJ : les femmes n'entendent pas, le public voit tout - ironie dramatique maximale.",
+  });
+
+  questions.push({
+    question: "Quel procédé clôt la scène (l. 32-33) et quel est son effet ?",
+    correct: "Parallélisme final - symétrie ironique : chacune croit avoir gagné, les deux restent dans l'illusion",
+    choices: shuffle([
+      "Parallélisme final - symétrie ironique : chacune croit avoir gagné, les deux restent dans l'illusion",
+      "Antithèse finale - DJ révèle enfin la vérité à l'une des deux femmes",
+      "Stichomythie - les deux femmes s'affrontent une dernière fois devant DJ",
+      "Aparté - DJ confie au public son vrai choix entre Charlotte et Mathurine",
+    ]),
+    explication: "Charlotte : 'au moins' (doute). Mathurine : futur de certitude. DJ remporte les jeux du coeur et de la parole.",
+  });
+
+  return shuffle(questions);
+}
+
+// ── MODE QCM ───────────────────────────────────────────────────────────────────
+function ModeQCM({ texte, onBack }) {
+  const [questions] = useState(() => generateQCM(texte));
+  const [idx, setIdx] = useState(0);
+  const [chosen, setChosen] = useState(null);
+  const [scores, setScores] = useState({ ok:0, ko:0 });
+  const [done, setDone] = useState(false);
+
+  const q = questions[idx];
+  const isCorrect = chosen === q.correct;
+
+  function pick(choice) { if (chosen !== null) return; setChosen(choice); }
+  function next() {
+    setScores(s => ({ ...s, [isCorrect?"ok":"ko"]: s[isCorrect?"ok":"ko"]+1 }));
+    if (idx + 1 >= questions.length) { setDone(true); return; }
+    setIdx(i => i+1); setChosen(null);
+  }
+  function restart() { setIdx(0); setChosen(null); setScores({ok:0,ko:0}); setDone(false); }
+
+  if (done) return <Score correct={scores.ok} total={questions.length} onBack={onBack} onRetry={restart} />;
 
   return (
-    <div style={{ padding:"16px", paddingBottom:40 }}>
-      <div style={{ fontSize:12, color:C.muted, marginBottom:14, lineHeight:1.5 }}>
-        Complète les cases vides. Appuie sur « Voir » pour la correction.
+    <div style={{ padding:"16px" }}>
+      <div style={pbar}><div style={pfill((idx/questions.length)*100)} /></div>
+      <div style={{ fontSize:11, color:C.hint, textAlign:"right", marginBottom:14 }}>Question {idx+1} / {questions.length}</div>
+
+      <div style={{ ...card({ marginBottom:16, padding:"18px" }) }}>
+        <div style={{ fontSize:11, letterSpacing:"0.07em", textTransform:"uppercase", color:C.hint, marginBottom:8 }}>Quiz</div>
+        <div style={{ fontSize:15, fontWeight:"bold", color:C.text, lineHeight:1.5 }}>{q.question}</div>
       </div>
-      {texte.mouvements.map(m => (
-        <div key={m.num} style={{ marginBottom:18 }}>
-          <div style={{
-            display:"flex", alignItems:"center", gap:8, marginBottom:8,
-            padding:"7px 12px", background:`${m.couleur}22`,
-            borderRadius:10, border:`1px solid ${m.couleur}44`,
-          }}>
-            <div style={{ width:18, height:18, borderRadius:"50%", background:m.couleur, display:"flex", alignItems:"center", justifyContent:"center", fontSize:10, fontWeight:"bold", color:"white" }}>{m.num}</div>
-            <div style={{ fontSize:12, fontWeight:"bold", color:C.text }}>{m.titre}</div>
-          </div>
-          {questions.filter(q => q.mouvement === m.num).map((q, qi) => {
-            const i = questions.indexOf(q);
-            return (
-              <div key={qi} style={{ ...card({ marginBottom:8 }) }}>
-                <div style={{ fontSize:10, color:C.hint, marginBottom:8 }}>{q.lignes}</div>
-                <div style={{ marginBottom:8 }}>
-                  <div style={{ fontSize:10, textTransform:"uppercase", letterSpacing:"0.05em", color:C.hint, marginBottom:4 }}>Procédé</div>
-                  {q.hideNom
-                    ? <input placeholder="Nom du procédé…" value={answers[i]||""} onChange={e => setAnswers(a => ({...a,[i]:e.target.value}))}
-                        style={{ width:"100%", background:"rgba(255,255,255,0.07)", border:`1px solid ${C.border}`, borderRadius:8, padding:"8px 10px", color:C.text, fontSize:13, boxSizing:"border-box", fontFamily:"Georgia,serif" }} />
-                    : <div style={{ fontSize:13, fontWeight:"bold", color:C.text }}>{q.nom}</div>
-                  }
+
+      <div style={{ display:"flex", flexDirection:"column", gap:8, marginBottom:16 }}>
+        {q.choices.map((choice, i) => {
+          const isPicked = chosen === choice;
+          const isRight = chosen !== null && choice === q.correct;
+          const isWrong = isPicked && !isRight;
+          return (
+            <div key={i} onClick={() => pick(choice)} style={{
+              ...card({
+                cursor: chosen ? "default" : "pointer", padding:"12px 16px",
+                borderColor: isRight ? C.teal : isWrong ? C.red : C.border,
+                background: isRight ? C.tealL : isWrong ? C.redL : C.surface,
+                transition:"all 0.15s",
+              })
+            }}>
+              <div style={{ display:"flex", alignItems:"flex-start", gap:10 }}>
+                <div style={{
+                  width:22, height:22, borderRadius:"50%", flexShrink:0, marginTop:1,
+                  border: `1.5px solid ${isRight ? C.teal : isWrong ? C.red : C.border}`,
+                  background: isRight ? C.teal : isWrong ? C.red : "transparent",
+                  display:"flex", alignItems:"center", justifyContent:"center",
+                  fontSize:10, fontWeight:"bold",
+                  color: (isRight || isWrong) ? "white" : C.hint,
+                }}>
+                  {isRight ? "✓" : isWrong ? "✗" : ["A","B","C","D"][i]}
                 </div>
-                <div style={{ fontSize:12, fontStyle:"italic", color:C.muted, marginBottom:8, lineHeight:1.4 }}>{q.exemple}</div>
-                <div>
-                  <div style={{ fontSize:10, textTransform:"uppercase", letterSpacing:"0.05em", color:C.hint, marginBottom:4 }}>Effet</div>
-                  {!q.hideNom
-                    ? <input placeholder="Décris l'effet…" value={answers[i]||""} onChange={e => setAnswers(a => ({...a,[i]:e.target.value}))}
-                        style={{ width:"100%", background:"rgba(255,255,255,0.07)", border:`1px solid ${C.border}`, borderRadius:8, padding:"8px 10px", color:C.text, fontSize:13, boxSizing:"border-box", fontFamily:"Georgia,serif" }} />
-                    : revealed[i]
-                      ? <div style={{ fontSize:13, color:C.text, lineHeight:1.5 }}>{q.effet}</div>
-                      : <button onClick={() => setRevealed(r => ({...r,[i]:true}))}
-                          style={{ ...btn("rgba(255,255,255,0.06)", C.border), marginTop:0, padding:"8px", fontSize:12 }}>Voir la réponse</button>
-                  }
+                <div style={{ fontSize:13, color: isRight ? "#064E3B" : isWrong ? "#7B1A1A" : C.text, lineHeight:1.5 }}>
+                  {choice}
                 </div>
               </div>
-            );
-          })}
-        </div>
-      ))}
-      <button style={btn(C.violetL, C.violetB)} onClick={onBack}>← Retour au menu</button>
+            </div>
+          );
+        })}
+      </div>
+
+      {chosen !== null && (
+        <>
+          <div style={{
+            background: isCorrect ? C.tealL : C.redL,
+            border: `1px solid ${isCorrect ? C.tealB : C.redB}`,
+            borderLeft: `4px solid ${isCorrect ? C.teal : C.red}`,
+            borderRadius:"0 10px 10px 0", padding:"10px 14px", marginBottom:12,
+            fontSize:12, color: isCorrect ? "#064E3B" : "#7B1A1A", lineHeight:1.5,
+          }}>
+            <div style={{ fontWeight:"bold", marginBottom:4 }}>{isCorrect ? "Correct !" : "Pas tout à fait."}</div>
+            {q.explication}
+          </div>
+          <button style={btn(C.violetL, C.violetB)} onClick={next}>
+            {idx + 1 >= questions.length ? "Voir mon score" : "Question suivante"}
+          </button>
+        </>
+      )}
     </div>
   );
 }
 
-// ── MODE ORDRE ─────────────────────────────────────────────────────────────────
 function ModeMouvement({ texte, onBack }) {
   const all = getAllProcedes(texte);
   const [cards] = useState(() => shuffle(all));
@@ -586,7 +796,7 @@ function ModeExaminateur({ texte, onBack }) {
 // ── MODES GRID (pour un texte) ────────────────────────────────────────────────
 const MODES = [
   { id:"flashcards",   icon:"🃏", name:"Flashcards",      desc:"Procédé → exemple → effet" },
-  { id:"lacunaire",    icon:"✏️", name:"Lacunaire",       desc:"Complète les cases vides" },
+  { id:"qcm",          icon:"🧠", name:"Quiz",             desc:"QCM sur tous les éléments de la fiche" },
   { id:"mouvement",    icon:"🗂️", name:"Quel mouvement ?", desc:"Classe le procédé dans le bon mouvement" },
   { id:"examinateur",  icon:"👩‍🏫", name:"Examinateur",    desc:"Questions type oral du bac" },
 ];
@@ -722,7 +932,7 @@ export default function App() {
 
       {/* ── MODES ── */}
       {screen === "mode" && texte && mode === "flashcards"  && <ModeFlashcards  texte={texte} onBack={() => { setScreen("texte-menu"); setMode(null); }} />}
-      {screen === "mode" && texte && mode === "lacunaire"   && <ModeLacunaire   texte={texte} onBack={() => { setScreen("texte-menu"); setMode(null); }} />}
+      {screen === "mode" && texte && mode === "qcm"         && <ModeQCM         texte={texte} onBack={() => { setScreen("texte-menu"); setMode(null); }} />}
       {screen === "mode" && texte && mode === "mouvement"   && <ModeMouvement   texte={texte} onBack={() => { setScreen("texte-menu"); setMode(null); }} />}
       {screen === "mode" && texte && mode === "examinateur" && <ModeExaminateur texte={texte} onBack={() => { setScreen("texte-menu"); setMode(null); }} />}
 
