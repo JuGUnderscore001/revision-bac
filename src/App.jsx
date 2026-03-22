@@ -554,9 +554,7 @@ const MODES = [
 
 // ── HOME ───────────────────────────────────────────────────────────────────────
 export default function App() {
-  // nav: "home" | "texte-menu" | "fiche" | "mode"
   const [screen, setScreen] = useState("home");
-  const [tab, setTab] = useState("fiches");   // "fiches" | "entrainer"
   const [texteIdx, setTexteIdx] = useState(null);
   const [mode, setMode] = useState(null);
 
@@ -596,32 +594,16 @@ export default function App() {
       {/* ── HOME ── */}
       {screen === "home" && (
         <div>
-          {/* Hero */}
-          <div style={{ textAlign:"center", padding:"28px 20px 20px" }}>
-            <div style={{ display:"inline-block", background:C.violetL, border:`1px solid ${C.violetB}`, color:"#c4bbff", fontSize:11, letterSpacing:"0.1em", textTransform:"uppercase", borderRadius:20, padding:"3px 12px", marginBottom:12 }}>
+          <div style={{ textAlign:"center", padding:"32px 20px 24px" }}>
+            <div style={{ display:"inline-block", background:C.violetL, border:`1px solid ${C.violetB}`, color:"#c4bbff", fontSize:11, letterSpacing:"0.1em", textTransform:"uppercase", borderRadius:20, padding:"3px 12px", marginBottom:14 }}>
               Révision · Lecture linéaire
             </div>
-            <div style={{ fontSize:24, fontStyle:"italic", color:C.text, lineHeight:1.2, marginBottom:6 }}>Bac Français</div>
-            <div style={{ fontSize:13, color:C.muted }}>10 textes · Fiches + 4 modes de révision</div>
+            <div style={{ fontSize:26, fontStyle:"italic", color:C.text, lineHeight:1.2, marginBottom:6 }}>Bac Français</div>
+            <div style={{ fontSize:13, color:C.muted }}>1ère Générale · 10 textes</div>
           </div>
 
-          {/* Tabs */}
-          <div style={{ display:"flex", borderBottom:`1px solid ${C.border}`, margin:"0 0 16px" }}>
-            {[{id:"fiches",label:"📄 Fiches"},{id:"entrainer",label:"🎯 S'entraîner"}].map(t => (
-              <button key={t.id} onClick={()=>setTab(t.id)} style={{
-                flex:1, padding:"11px", fontSize:13, fontWeight:"bold",
-                border:"none", background:"none", cursor:"pointer", fontFamily:"Georgia,serif",
-                color: tab===t.id ? C.violet : C.muted,
-                borderBottom: tab===t.id ? `2px solid ${C.violet}` : "2px solid transparent",
-              }}>{t.label}</button>
-            ))}
-          </div>
-
-          {/* Liste des textes */}
-          <div style={{ padding:"0 18px 32px" }}>
-            <div style={{ ...sectionLabel, marginBottom:12 }}>
-              {tab==="fiches" ? "Consulte la fiche de chaque texte" : "Choisis un texte pour t'entraîner"}
-            </div>
+          <div style={{ padding:"0 18px 40px" }}>
+            <div style={{ ...sectionLabel, marginBottom:12 }}>Choisis un texte</div>
             {TEXTES.map((t, i) => (
               <div key={t.id} onClick={() => goTexteMenu(i)} style={{
                 ...card({ cursor:"pointer", marginBottom:10 }),
@@ -640,9 +622,8 @@ export default function App() {
                 </div>
               </div>
             ))}
-            {/* Placeholder textes à venir */}
             {Array.from({length: 10 - TEXTES.length}).map((_, i) => (
-              <div key={i} style={{ ...card({ opacity:0.35, marginBottom:8 }) }}>
+              <div key={i} style={{ ...card({ marginBottom:8, opacity:0.35 }) }}>
                 <div style={{ fontSize:13, color:C.hint, fontStyle:"italic" }}>Texte n°{TEXTES.length+i+1} — à venir</div>
               </div>
             ))}
